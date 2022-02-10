@@ -162,6 +162,11 @@ export default function Firststep() {
                           control={<Radio color="primary" />}
                           label="One-time"
                         />
+                        <Chip
+                          color="primary"
+                          size="small"
+                          label="25% OFF"
+                        />
                       </div>
                       {userData.CleaningType === "General Cleaning" ? (
                         <div>
@@ -175,8 +180,7 @@ export default function Firststep() {
                             <Chip
                               color="primary"
                               size="small"
-                              label="5% OFF"
-                              icon={<LocalOfferIcon />}
+                              label="Contact Us"
                             />
                           </div>
                           <div className="radio">
@@ -189,8 +193,7 @@ export default function Firststep() {
                             <Chip
                               color="primary"
                               size="small"
-                              label="10% OFF"
-                              icon={<LocalOfferIcon />}
+                              label="Contact Us"
                             />
                           </div>
                         </div>

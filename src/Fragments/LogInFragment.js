@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     backgroundImage:
-      "url(https://diola.ae/wp-content/uploads/2021/08/1-diola-logo-new.png)",
+      "url(https://firebasestorage.googleapis.com/v0/b/diola-4f3ff.appspot.com/o/1-diola-logo-new-600x278.png?alt=media&token=20342a9e-3e59-44f6-a955-4c34864c27f5)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"

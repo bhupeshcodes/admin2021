@@ -35,7 +35,7 @@ export default function OrderForm() {
             <Grid container>
               <Grid item xs={6}>
                 <img
-                  src="https://diola.ae/wp-content/uploads/2021/08/1-diola-logo-new.png"
+                  src="https://firebasestorage.googleapis.com/v0/b/diola-4f3ff.appspot.com/o/1-diola-logo-new-600x278.png?alt=media&token=20342a9e-3e59-44f6-a955-4c34864c27f5 "
                   alt="logo"
                   style={{
                     width: "120px",
@@ -124,7 +124,7 @@ export default function OrderForm() {
           </Hidden>
           <Hidden only={["lg"]}>
             <img
-              src="https://www.diola.websidedesigner.com/wp-content/uploads/2021/06/cropped-logo-1.png"
+              src="https://firebasestorage.googleapis.com/v0/b/diola-4f3ff.appspot.com/o/1-diola-logo-new-600x278.png?alt=media&token=20342a9e-3e59-44f6-a955-4c34864c27f5"
               alt="logo"
               style={{
                 width: "120px",

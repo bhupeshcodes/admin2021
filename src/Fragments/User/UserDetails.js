@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect } from "react";
 import * as ROLES from "../../UsersComponents/constants/roles";
 import { withAuthorization } from "../../UsersComponents/Session";
 import { compose } from "redux";
@@ -19,7 +19,7 @@ import { mainContext } from "../../Contexts/MainContext";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import firebase from "firebase/app";
 import { db } from "../../Firebase";
-import LocationDialog from "../../Component.js/Dialog/LocationDialog";
+import LocationDialog from "../../Component.js/Dialog/LocationDialog2";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 
 import * as Yup from "yup";
@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 20,
     [theme.breakpoints.down("md")]: {
       width: 800,
+      height: "100%",
     },
     [theme.breakpoints.down("sm")]: {
       width: 350,
@@ -82,7 +83,7 @@ const UserDetails = () => {
   const classes = useStyles();
   const { handleMapOpen, details, setDetails, loading, setLoading } =
     useContext(mainContext);
-  const ref = useRef(true);
+
   useEffect(() => {
     var userId = JSON.parse(localStorage.getItem("authUser")).uid;
     const dbRef = firebase.database().ref();
@@ -319,7 +320,7 @@ const UserDetails = () => {
                                         display: "flex",
                                       }}
                                     >
-                                      <Grid item xs={2}>
+                                      <Grid item xs={4}>
                                         <h4
                                           style={{
                                             display: "flex",
@@ -350,14 +351,15 @@ const UserDetails = () => {
                                     >
                                       <Button
                                         endIcon={<ArrowDropDownIcon />}
-                                        onClick={handleMapOpen}
+                                        onClick={() => {
+                                          handleMapOpen()
+                                        }}
                                       >
                                         Change Address
                                       </Button>
                                     </div>
                                   </Grid>
                                 </Grid>
-                                \
                                 <div
                                   style={{
                                     width: "100%",

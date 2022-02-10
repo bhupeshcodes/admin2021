@@ -69,19 +69,19 @@ export default function Thirdstep() {
   const [userId, setUserId] = useState("dujgkghl");
   const handleDateChange = (date) => {
     setSelectedDate(date);
+    setTime("")
     setUserData({
       ...userData,
       date: `${pad(date.getFullYear(), 4)}-${pad(date.getMonth() + 1)}-${pad(
         date.getDate()
-      )} ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(
-        date.getSeconds()
-      )}.${pad(date.getMilliseconds(), 3)}`,
+      )}`,
+      time: ""
     });
   };
   const pad = (n, s = 2) => `${new Array(s).fill(0)}${n}`.slice(-s);
 
   function disableWeekends(date) {
-    return date.getDay() === 5;
+    return date.getDay() === 6;
   }
 
   useEffect(() => {
@@ -129,7 +129,6 @@ export default function Thirdstep() {
                       <KeyboardDatePicker
                         margin="normal"
                         id="date-picker-dialog"
-                        label="Click to Select Date"
                         format="MM/dd/yyyy"
                         value={selectedDate}
                         shouldDisableDate={disableWeekends}

@@ -279,7 +279,7 @@ const UserDetailsMobile = () => {
                         display: "flex",
                       }}
                     >
-                      <Grid item xs={2}>
+                      <Grid item xs={4}>
                         <h4
                           style={{
                             display: "flex",

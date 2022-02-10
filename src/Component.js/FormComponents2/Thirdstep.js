@@ -111,17 +111,19 @@ export default function Thirdstep() {
   const [selectedDays, setSelectedDays] = useState(new Date());
   const handleDateChange = (date) => {
     setSelectedDate(date);
+    setTime("")
     setUserData({
       ...userData,
       date: `${pad(date.getFullYear(), 4)}-${pad(date.getMonth() + 1)}-${pad(
         date.getDate()
       )}`,
+      time: ""
     });
   };
   const pad = (n, s = 2) => `${new Array(s).fill(0)}${n}`.slice(-s);
 
   function disableWeekends(date) {
-    return date.getDay() === 5;
+    return date.getDay() === 6;
   }
 
   const [userId, setUserId] = useState("dujgkghl");

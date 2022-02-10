@@ -242,7 +242,7 @@ const SignInFormBase = (props) => {
           }}
         >
           <img
-            src="https://diola.ae/wp-content/uploads/2021/08/1-diola-logo-new.png"
+            src="https://firebasestorage.googleapis.com/v0/b/diola-4f3ff.appspot.com/o/1-diola-logo-new-600x278.png?alt=media&token=20342a9e-3e59-44f6-a955-4c34864c27f5"
             className={classes.image}
             alt="Logo"
           />
@@ -256,14 +256,23 @@ const SignInFormBase = (props) => {
               Sign in
             </Typography>
             <form className={classes.form} noValidate>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                onChange={onChangeHandler1}
-                label="Enter Phone Number"
-              />
+              <Grid container>
+                <Grid item xs={2}>
+                  <div style={{display: "flex", alignItem: "center", justifyContent: "center", backgroundColor: "#f7f7f7", marginTop: "15px", borderRadius: "5px", color: "#022949"}}>
+                    <h3>+971</h3>
+                  </div>
+                </Grid>
+                <Grid item xs={10}>
+                  <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    onChange={onChangeHandler1}
+                    label="Enter Phone Number"
+                  />
+                </Grid>
+              </Grid>
               <div id="recaptcha-container"></div>
 
               <Button
