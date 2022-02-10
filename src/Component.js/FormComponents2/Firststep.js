@@ -203,6 +203,11 @@ export default function Firststep() {
                           control={<Radio color="primary" />}
                           label="One-time"
                         />
+                        <Chip
+                          color="primary"
+                          size="small"
+                          label="25% OFF"
+                        />
                       </div>
                       {userData.CleaningType === "General Cleaning" ? (
                         <div>

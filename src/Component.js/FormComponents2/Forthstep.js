@@ -116,7 +116,7 @@ const Forthstep = (props) => {
     setUserData({ ...userData, paymentOptions: event.target.value });
   };
 
-  const bill1 = 40;
+  const bill1 = 25;
   const bill2 = 35;
   const bill3 = 50;
   const material = 5;
@@ -474,7 +474,7 @@ const Forthstep = (props) => {
                     >
                       {CleaningType === "General Cleaning"
                         ? frequency === "One-time"
-                          ? "0%"
+                          ? "25%"
                           : frequency === "Weekly"
                           ? "5%"
                           : frequency === "Montly"
