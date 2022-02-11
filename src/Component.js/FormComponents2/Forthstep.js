@@ -104,6 +104,7 @@ const Forthstep = (props) => {
     email,
     setEmail,
     setDuration,
+    duration,
   } = useContext(mainContext);
   const [product, setProduct] = React.useState({
     description: "Here Description",
@@ -116,9 +117,9 @@ const Forthstep = (props) => {
     setUserData({ ...userData, paymentOptions: event.target.value });
   };
 
-  const bill1 = 25;
-  const bill2 = 35;
-  const bill3 = 50;
+  const bill1 = 30;
+  const bill2 = 30;
+  const bill3 = 30;
   const material = 5;
 
   useEffect(() => {
@@ -343,36 +344,14 @@ const Forthstep = (props) => {
                         textDecoration: "bold",
                       }}
                     >
-                      Cost:{" "}
+                      Cost:
                       {CleaningType === "General Cleaning"
-                        ? hour === 2
+                        ? duration <= 3
                           ? "40 AED / Hour"
-                          : hour === 3
+                          : duration > 3
                           ? "40 AED / Hour"
-                          : hour === 4
-                          ? "35 AED / Hour"
-                          : hour === 5
-                          ? "35 AED / Hour"
-                          : hour === 6
-                          ? "35 AED / Hour"
-                          : hour === 7
-                          ? "35 AED / Hour"
-                          : hour === 8
-                          ? "35 AED / Hour"
                           : null
-                        : hour === 2
-                        ? "50 AED / Hour"
-                        : hour === 3
-                        ? "50 AED / Hour"
-                        : hour === 4
-                        ? "50 AED / Hour"
-                        : hour === 5
-                        ? "50 AED / Hour"
-                        : hour === 6
-                        ? "50 AED / Hour"
-                        : hour === 7
-                        ? "50 AED / Hour"
-                        : hour === 8
+                        : CleaningType === "Deep Cleaning"
                         ? "50 AED / Hour"
                         : null}
                     </Grid>

@@ -78,9 +78,9 @@ const Forthstep = () => {
     setPaymentOptions(event.target.value);
     setUserData({ ...userData, paymentOptions: event.target.value });
   };
-  const bill1 = 25;
-  const bill2 = 35;
-  const bill3 = 50;
+  const bill1 = 30;
+  const bill2 = 30;
+  const bill3 = 30;
   const material = 5;
 
   useEffect(() => {
@@ -297,7 +297,7 @@ const Forthstep = () => {
                         ? duration <= 3
                           ? "40 AED / Hour"
                           : duration > 3
-                          ? "35 AED / Hour"
+                          ? "40 AED / Hour"
                           : null
                         : CleaningType === "Deep Cleaning"
                         ? "50 AED / Hour"
