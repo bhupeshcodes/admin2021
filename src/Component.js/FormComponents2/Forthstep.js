@@ -624,7 +624,7 @@ const Forthstep = (props) => {
                         <Grid item xs={6} style={{ paddingLeft: 30 }}>
                           {paymentOptions === "OnlinePayment" ? (
                             <StripeCheckout
-                              stripeKey="pk_test_51JH2zZD7BsmwqFXq2FKKmypK2EOHkXBcEXvGlhdtLZ6nvNmzJAwWaN1y2kiNZitVNVcy4ax1ZpuJ0Zzv2rkoOQ5W00KiVHKj4U"
+                              stripeKey="pk_live_51JMxXLGMoJ7zwz1YbeTWY7K1U3OD797GuIANDaZHbWEwb93wycKvpil6DIh9RG1v6pXG61Rj5X0rhjP7SztOjSlh00ooDBvtiV"
                               token={makePayment}
                               name="Pay Now"
                               amount={billing * 100}
